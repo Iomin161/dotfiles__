@@ -1,0 +1,70 @@
+[user]
+    name = Iomin161
+    email = organg@posteo.de
+   # signingkey = 20F911ABE33DA175
+[core]
+    editor = nvim
+    excludesfile = ~/.gitignore_global
+    autocrlf = input
+
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+
+[color]
+    ui = true
+
+[diff]
+    tool = nvimdiff
+    guitool = nvimdiff
+
+[merge]
+    tool = nvimdiff
+    guitool = nvimdiff
+
+[difftool "nvimdiff"]
+    cmd = nvim -d --cmd "wincmd p" "$LOCAL" "$REMOTE"
+
+[mergetool "nvimdiff"]
+    cmd = nvim -d --cmd "wincmd p" "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+    trustExitCode = false
+
+[push]
+    default = simple
+
+[init]
+    defaultBranch = main
+
+[commit]
+#    gpgsign = true
+
+#[gpg]
+#    program = gpg
+#    format = ssh
+
+[credential]
+    helper = cache --timeout=3600
+
+[rebase]
+    autoStash = true
+
+[interactive]
+    diffFilter = diff-highlight
+
+[log]
+    decorate = true
+    showSignature = true
+
+[fetch]
+    fsckObjects = true
+
+[http]
+    sslVerify = true
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/
