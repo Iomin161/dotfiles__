@@ -40,7 +40,7 @@
 [init]
     defaultBranch = main
 
-[commit]
+#[commit]
 #    gpgsign = true
 
 #[gpg]
